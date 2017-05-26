@@ -6,7 +6,13 @@
   "scripts": {
     "build": "set NODE_ENV=production && npm run clean && mkdir dist && webpack -p",
     "clean": "rimraf dist",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "commit": "git add * && git commit -a && git commit -m 'Procedural Commite'",
+    "push_code": "git push origin master",
+    "push_dist": "git subtree push --prefix dist origin gh-pages",
+    "deploy_dist": "npm run build && npm run commit && npm run push_dist",
+    "deploy_src": "npm run build && npm run commit && npm run push_code",
+    "deploy": "npm run build && npm run commit && npm run push_code && npm run push_dist"
   },
   "repository": "https://github.com/StephenGrider/WebpackProject",
   "author": "",
