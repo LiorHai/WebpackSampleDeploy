@@ -7,7 +7,7 @@
     "build": "set NODE_ENV=production && npm run clean && mkdir dist && webpack -p",
     "clean": "rimraf dist",
     "dev": "webpack-dev-server",
-    "commit": "git add * && git commit -a && git commit -m 'Procedural Commite'",
+    "commit": "git add * && git commit -a && git commit -m",
     "push_code": "git push origin master",
     "push_dist": "git subtree push --prefix dist origin gh-pages",
     "deploy_dist": "npm run build && npm run commit && npm run push_dist",
